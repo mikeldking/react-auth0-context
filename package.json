@@ -1,6 +1,6 @@
 {
   "name": "react-auth0-context",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Auth0 Context using auth0-spa-js",
   "source": "src/index.tsx",
   "main": "dist/index.js",
