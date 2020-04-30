@@ -67,3 +67,54 @@ async function makeAuthenticatedAPIRequest() {
   return response.json();
 }
 ```
+
+## How to use with Routing
+If you are using something like React Router, you can use `useAuth` to create a private toute
+
+```typescript
+import React, { useEffect } from "react";
+import { Route, RouteProps } from "react-router-dom";
+import { useAuth } from "react-auth0-context";
+import { Location } from "history";
+
+interface IPrivateRouteProps extends RouteProps {
+  // tslint:disable-next-line:no-any
+  component: any;
+}
+
+function locationToString(location: Location<any>) {
+  const { pathname, search } = location;
+  let str = pathname;
+  if (search) {
+    str += search;
+  }
+  return str;
+}
+
+const PrivateRoute: React.FunctionComponent<IPrivateRouteProps> = (
+  routeProps
+) => {
+  const { component: Component, path, ...rest } = routeProps;
+  const { isAuthenticated, loginWithRedirect } = useAuth();
+
+  useEffect(() => {
+    const loginFn = async () => {
+      if (!isAuthenticated) {
+        const targetUrl =
+          routeProps.location && locationToString(routeProps.location);
+        await loginWithRedirect({
+          redirect_uri: window.location.origin,
+          appState: { targetUrl },
+        });
+      }
+    };
+    loginFn();
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  }, [isAuthenticated, loginWithRedirect, path]);
+  return isAuthenticated ? (
+    <Route path={path} render={(props) => <Component {...props} />} {...rest} />
+  ) : null;
+};
+
+export default PrivateRoute;
+```
