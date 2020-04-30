@@ -8531,10 +8531,10 @@ react-app-rewired@^2.1.5:
   dependencies:
     semver "^5.6.0"
 
-react-auth0-context@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/react-auth0-context/-/react-auth0-context-0.0.2.tgz#9b623d98397947466a17a0f66b32305efefe4b53"
-  integrity sha512-47o0PnMUGaUcwUOz3egj0G/yZP00IBBIysWP2uRaxT9Hfi7JDok7DyUOxRYbYAoumIuZAeanYUhPfv9aalk2vw==
+react-auth0-context@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-auth0-context/-/react-auth0-context-0.0.3.tgz#7f4cb3e493aa4a24148985ed134f11fed3e23dd6"
+  integrity sha512-cAvPf6pH5rg4wHgSXtL+sAWy0I5WCTyP4tDFLbQDLadta5UqUVFDEJ1Kgm9gcB6fyIC1QSBaNn/cHf+7S58QCQ==
   dependencies:
     "@auth0/auth0-spa-js" "^1.7.0"
 

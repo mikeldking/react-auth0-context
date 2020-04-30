@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { AuthProvider, useAuth } from "../../../dist";
+import { AuthProvider, useAuth } from "react-auth0-context";
 
 // Modify these values with your own configuration
 const domain = "tenant.auth0.com"; // Your tenant
