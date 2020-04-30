@@ -13,14 +13,23 @@ yarn add react-auth0-context
 Add the AuthProvider at the root of your React app and pass in your Auth0 application info and API identifier (audience)
 
 ```typescript
-<AuthProvider domain={domain} client_id={client_id} audience={audience}>
-  <App />
-</AuthProvider>
+import { AuthProvider } from "react-auth0-context";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AuthProvider domain={domain} client_id={client_id} audience={audience}>
+      <App />
+    </AuthProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 ```
 
 Add a way to log in
 
 ```typescript
+import { useAuth } from "react-auth0-context";
+
 const LoginButton = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth();
   return (

@@ -26,6 +26,7 @@ const LoginButton = () => {
     </button>
   );
 };
+
 function App() {
   return (
     <div className="App">
