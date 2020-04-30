@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "@babel/preset-typescript",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@hasura": "./src/apis/hasura"
+        },
+        "extensions": [".js", ".ts"]
+      }
+    ],
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}

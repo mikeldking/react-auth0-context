@@ -1,0 +1,32 @@
+{
+  "name": "react-auth0-context",
+  "version": "0.0.2",
+  "description": "React Auth0 Context using auth0-spa-js",
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mikeldking@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "microbundle": "^0.11.0",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not deat",
+    "not op_mini all"
+  ]
+}
