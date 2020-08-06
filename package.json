@@ -28,5 +28,22 @@
     ">0.2%",
     "not deat",
     "not op_mini all"
-  ]
+  ],
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeldking/react-auth0-context.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "auth0",
+    "context"
+  ],
+  "bugs": {
+    "url": "https://github.com/mikeldking/react-auth0-context/issues"
+  },
+  "homepage": "https://github.com/mikeldking/react-auth0-context#readme"
 }
